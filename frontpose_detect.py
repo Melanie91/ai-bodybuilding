@@ -14,7 +14,7 @@ pose = mp_pose.Pose(static_image_mode=False, model_complexity=1, min_detection_c
 
 # 嘗試加載訓練好的模型並打印模型摘要
 try:
-    model = load_model('C:/pose/frontpose_cnn.keras')
+    model = load_model('C:/pose/1119_5frontpose_cnn_new.keras')
     input_shape = model.input_shape
     print(f"模型預期的輸入形狀: {input_shape}")
 except Exception as e:
@@ -22,7 +22,7 @@ except Exception as e:
     exit()
 
 # 打開攝像頭
-cap = cv2.VideoCapture(0)  # 0 indicates the default webcam
+cap = cv2.VideoCapture(1)  # 0 indicates the default webcam
 if not cap.isOpened():
     print("Error: Could not open webcam.")
     exit()
